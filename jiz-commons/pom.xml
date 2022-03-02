@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.jiz</groupId>
+	<artifactId>jiz-commons</artifactId>
+	<version>0.0.0.1</version>
+	<packaging>jar</packaging>
+
+	<name>jiz-commons</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<java.version>1.8</java.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<commons-lang3.version>3.12.0</commons-lang3.version>
+
+		<log4j-api.version>2.17.1</log4j-api.version>
+		<log4j-core.version>2.17.1</log4j-core.version>
+
+		<junit-jupiter-engine.version>5.8.2</junit-jupiter-engine.version>
+		<mockito-core.version>4.3.1</mockito-core.version>
+		<mockito-junit-jupiter.version>4.3.1</mockito-junit-jupiter.version>
+		<hamcrest.version>2.2</hamcrest.version>
+
+		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+		<maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j-api.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j-core.version}</version>
+		</dependency>
+
+		<!-- junit 5 -->
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit-jupiter-engine.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito-core.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${mockito-junit-jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${maven-failsafe-plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
